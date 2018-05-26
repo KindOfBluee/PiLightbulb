@@ -1,0 +1,12 @@
+Sterowanie drzwiami gara¿owymi PHP + Python
+
+	GIT : https://github.com/skiwithpete/sesamepi
+	YT  : https://www.youtube.com/watch?v=p2abZ90-eU0
+
+Pojedyncza ¿arówka PHP + Python
+
+	YT  : https://youtu.be/WpM1aq4B8-A
+
+Sterowanie przekaŸnikiem za pomoc¹ Raspberry (Botland)
+
+	      https://botland.com.pl/content/129-sterowanie-przekaznikiem-za-pomoca-raspberrypi
