@@ -2,3 +2,5 @@ DC+   -   4 (5V)
 DC-   -   6 (GRN)
 IN1   -   3 (GPIO2 SDA1 I2C) || Biurko
 IN2   -   5 (GPIO3 SCL1 I2C) || £ó¿ko
+
+192.168.0.227
