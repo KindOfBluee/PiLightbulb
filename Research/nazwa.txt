@@ -1,0 +1,7 @@
+control
+lightbulb
+home
+smart
+remote
+freedom
+luminous
