@@ -6,3 +6,10 @@ IN2   -   5 (GPIO3 SCL1 I2C) || £ó¿ko
 192.168.0.227
 
 pscp plik pi@ip:/home/pi/*
+
+DC- - CZARNY
+DC+ - CZERWONY
+IN1 - ¯Ó£TY
+IN2 - POMARAÑCZOWy
+
+lokalizacja index.html - /var/www/html

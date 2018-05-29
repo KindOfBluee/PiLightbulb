@@ -1,0 +1,31 @@
+<html>
+<head>
+<meta charset="UTF-8" />
+  <link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+
+<?php
+if (isset($_POST['DeskON'])){
+  exec("sudo python3 /home/pi/PiLightbulb/desk_on.py");
+}
+if (isset($_POST['DeskOFF'])){
+  exec("sudo python3 /home/pi/PiLightbulb/desk_off.py");
+}
+if (isset($_POST['BedON'])){
+  exec("sudo python3 /home/pi/PiLightbulb/bed_on.py");
+}
+if (isset($_POST['BedOFF'])){
+  exec("sudo python3 /home/pi/PiLightbulb/bed_off.py");
+}
+?>
+
+
+<form method="post">
+  <button class="btn" name="DeskON">Desk ON</button>&nbsp;
+  <button class="btn" name="DeskOFF">Desk OFF</button><br><br>
+  <button class="btn" name="BedON">Bed ON</button>&nbsp;
+  <button class="btn" name="BedOFF">Bed OFF</button><br><br>
+</form>
+
+
+</html>
