@@ -3,6 +3,6 @@
     exec("sudo python3 /home/pi/PiLightbulb/desk.py");
   }
   if($_POST['action'] == 'bed'){
-    exec("sudo python3 /home/pi/PiLightbulb/desk.py");
+    exec("sudo python3 /home/pi/PiLightbulb/bed.py");
   }
 ?>
