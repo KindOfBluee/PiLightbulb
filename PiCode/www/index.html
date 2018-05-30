@@ -1,31 +1,72 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
-<meta charset="UTF-8" />
-  <link rel="stylesheet" type="text/css" href="css/style.css">
+
+
+<meta charset="utf-8">
+<title>PiLightbulb</title>
+<meta name="author" content="">
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<link href="https://fonts.googleapis.com/css?family=Raleway:100,300,400,600" rel="stylesheet">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+<link rel="stylesheet" href="css/normalize.css">
+<link rel="stylesheet" href="css/skeleton.css">
+<link rel="stylesheet" href="css/main.css">
+
+<link rel="icon" type="image/png" href="images/idea.png">
+
 </head>
+<body>
 
-<?php
-if (isset($_POST['DeskON'])){
-  exec("sudo python3 /home/pi/PiLightbulb/desk_on.py");
-}
-if (isset($_POST['DeskOFF'])){
-  exec("sudo python3 /home/pi/PiLightbulb/desk_off.py");
-}
-if (isset($_POST['BedON'])){
-  exec("sudo python3 /home/pi/PiLightbulb/bed_on.py");
-}
-if (isset($_POST['BedOFF'])){
-  exec("sudo python3 /home/pi/PiLightbulb/bed_off.py");
-}
-?>
+  <script>
+    function desk(){
+      $.ajax({
+        type: "POST",
+        url: "click.php",
+        data:{action:'desk'},
+      })
+    }
+    function bed(){
+      $.ajax({
+        type: "POST",
+        url: "click.php",
+        data:{action:'bed'},
+      })
+    }
+  </script>
 
+  <nav>
+    <div class="container"><img src="images/idea.png" alt="a lightbulb"> PiLightbulb</div>
+  </nav>
 
-<form method="post">
-  <button class="btn" name="DeskON">Desk ON</button>&nbsp;
-  <button class="btn" name="DeskOFF">Desk OFF</button><br><br>
-  <button class="btn" name="BedON">Bed ON</button>&nbsp;
-  <button class="btn" name="BedOFF">Bed OFF</button><br><br>
-</form>
+  <header>
+    <h1 class="container">Home automatisation at the tip of your fingers</h1>
+  </header>
 
+  <section class="container">
 
+  <article>
+    <img src="images/idea.png">
+    <div class="norm">Lightbulb above the desk</div>
+    <input type="checkbox" class="toggle-switch" id="checkbox-one" onclick="desk()">
+    <label for="checkbox-one"></label>
+  </article>
+
+  <article>
+    <img src="images/idea.png">
+    <div class="norm">Lightbulb above the bed</div>
+    <input type="checkbox" class="toggle-switch" id="checkbox-two" onclick="bed()">
+    <label for="checkbox-two"></label>
+  </article>
+
+  </section>
+
+  <footer>
+    Made with <span class="heart">&hearts;</span> and Raspberry Pi
+  </footer>
+
+</body>
 </html>
