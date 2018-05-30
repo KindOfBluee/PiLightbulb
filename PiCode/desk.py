@@ -16,8 +16,11 @@ for i in pinList:
     GPIO.setup(i, GPIO.OUT)
 
 def trigger() :
-        for i in pinList:
-          GPIO.output(i, GPIO.LOW) #?
+    for i in pinList:
+        if(GPIO.input(i) == 0):
+            GPIO.output(i, GPIO.HIGH)
+        else:
+            GPIO.output(i, GPIO.LOW)
 #          GPIO.cleanup()
 
 try:
